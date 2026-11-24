@@ -26,16 +26,16 @@ themes.
 
 ### Web
 
-These use demo riders, sent through the real backend by a ride simulator I wrote. Map tiles were
-turned off when I took them, so the routes are drawn on a plain background.
+These use demo riders, sent through the real backend by a ride simulator I wrote.
 
-A group ride while it's happening. Each rider's route draws in as they go, with their numbers next
-to them on the map.
+A group ride through downtown Toronto while it's happening. Each rider's route draws in as they go,
+with their numbers next to them on the map.
 
 ![A live group ride with five riders](screenshots/web-02-live-group-ride.png)
 
 After the ride you get highlights: who spent the most time on the front, a few awards, totals for
-the group, and a replay of the whole ride. This one is in the light theme.
+the group, and a replay of the whole ride. This one is in the light theme. The map was switched off
+for this one and the ones below, so routes there are drawn on a plain background.
 
 ![Group ride highlights in the light theme](screenshots/web-05-group-ride-highlights-light.png)
 
