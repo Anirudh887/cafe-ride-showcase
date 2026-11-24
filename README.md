@@ -31,15 +31,41 @@ Riders who already train with data and already ride with other people:
 
 ## Screenshots
 
+The interface is drawn as **chalk on a road surface**: hand-lettered headings, sketched frames and
+one colour per rider. The phone and the web app share a single design system, in light and dark.
+
+### Web
+
+The riders, club and rides below are demo data streamed through the real pipeline by the ride
+simulator. Map tiles were switched off for these captures, so routes are drawn on a plain
+background.
+
+**A group ride, live.** Everyone's route is drawn as they ride it, with each rider's power, heart
+rate and speed beside their dot and the gaps between them chalked on the road.
+
+![A live group ride with five riders](screenshots/web-02-live-group-ride.png)
+
+**After the ride: highlights.** Time on the front, awards and the group's combined figures, with a
+replay of the whole ride (light theme).
+
+![Group ride highlights in the light theme](screenshots/web-05-group-ride-highlights-light.png)
+
+| Front door | A live share link, on a phone |
+|---|---|
+| ![The Cafe Ride front door](screenshots/web-01-home.png) | ![A shared ride updating live on a phone](screenshots/web-03-live-share-link-phone.png) |
+
+| Ride detail | A club |
+|---|---|
+| ![Ride summary, power, heart rate and the trace](screenshots/web-04-ride-detail.png) | ![A club with upcoming rides and members](screenshots/web-06-club.png) |
+
+### Phone
+
 Taken on an Android phone during on-device testing. They predate the rename, so the app still says
 "Cadence" in places.
 
 | Ready to ride | Recording | Your rides | Group rides |
 |---|---|---|---|
 | ![Ride screen with a heart-rate strap paired](screenshots/01-ride-ready.png) | ![A ride recording, saved on the phone](screenshots/02-recording.png) | ![The ride history list](screenshots/03-your-rides.png) | ![Group rides you belong to and rides open to you](screenshots/04-group-rides.png) |
-
-The interface is drawn as **chalk on a road surface**: hand-lettered headings, sketched frames and
-one colour per rider. The phone and the web app share a single design system.
 
 ## What's built
 
