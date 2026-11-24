@@ -28,8 +28,9 @@ themes.
 
 These use demo riders, sent through the real backend by a ride simulator I wrote.
 
-A group ride through downtown Toronto while it's happening. Each rider's route draws in as they go,
-with their numbers next to them on the map.
+A group ride while it's happening, from City Hall down to the lake and west along the Waterfront
+Trail to High Park. Each rider's route draws in as they go, with their numbers next to them on the
+map.
 
 ![A live group ride with five riders](screenshots/web-02-live-group-ride.png)
 
