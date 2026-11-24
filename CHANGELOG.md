@@ -1,76 +1,76 @@
 # Changelog
 
-What changed in Cafe Ride, newest first. Written from the private repository's history.
+Newest first.
 
-## 10 Sep 2026: Platform upgrade
+## 10 Sep 2026
 
-- Moved the phone app to Expo 54 and React 19.
-- Fixed typechecking in the phone app's tests.
+- Upgraded the phone app to Expo 54 and React 19.
+- Fixed a type error in the phone app's tests.
 
-## 9 Sep 2026: On a real phone, and a new name
+## 9 Sep 2026
 
-- **Renamed the app Cafe Ride**, with its own mark: a cup of coffee with a bicycle wheel in the
-  crema, and a launcher icon to match.
-- The app now uses its name throughout: the sign-in front door, the "company" screens and arriving
-  at a ride.
-- **Group rides have a start, a coffee stop and a finish** on the map.
-- Fixed problems found by running the app on a real Android phone.
-- Rides recorded while offline now upload once the signal returns. The app no longer takes the
-  phone's word that a ride was uploaded.
-- A ride can be opened before it has left the phone, and remembers which group ride it was part of.
-- Distance for a ride recorded on the phone is now measured the same way everywhere.
-- From the group rides tab you can find a ride you could join.
+- Renamed the app from Cadence to Cafe Ride. It has a new logo too, a coffee cup with a bike wheel
+  in the crema, plus a matching app icon.
+- Updated the landing page and the rest of the app to use the new name.
+- Group rides can now have a start, a coffee stop and a finish on the map.
+- Fixed a batch of bugs I found running the app on my phone.
+- Rides recorded with no signal now upload once you're back online. The app also checks with the
+  server instead of assuming an upload worked.
+- You can open a ride before it has finished uploading.
+- Rides remember which group ride they were part of.
+- Distance is now worked out the same way everywhere.
+- The group rides tab shows rides you can join.
 
-## 8 Sep 2026: First rides on a device, and the chalk poster look
+## 8 Sep 2026
 
-- The phone runs on a real Android device, asks for Bluetooth permission, and shows a paired
-  sensor's reading before the ride starts.
-- A ride streams live into the group ride you've joined.
-- Rides can be renamed and deleted, on the web and the phone.
-- **Redesigned the web and phone as a chalk poster.** Drawings and handwriting carry the interface,
-  the road is the hero of a group ride, and empty states are drawn instead of grey text.
-- On the group map, each rider's figures sit beside their dot, "on the front" gets its own mark,
-  and the gaps between riders are chalked on the road.
-- Rider names are readable in each rider's own colour.
-- **Join Me:** open your own ride to company, not only join someone else's. The riding screen says
-  when a ride is being shared.
+- Got the app running on a real Android phone. It now asks for Bluetooth permission and shows your
+  sensor readings before you start.
+- Rides now stream into the group ride you've joined.
+- You can rename and delete rides, on the web and on the phone.
+- New look across the web and the phone, mostly drawings and handwriting instead of plain boxes.
+- On the group map, each rider's numbers now sit next to them, the rider on the front gets a marker,
+  and the gaps between riders are drawn on the road.
+- Rider names were hard to read in some colours. They're readable now.
+- You can open your own ride for others to join, not just join someone else's. The ride screen shows
+  when your ride is being shared.
 
-## 5 Sep 2026: Maps
+## 5 Sep 2026
 
-- One chalk-style basemap, self-hosted and shared by the web and the phone.
-- Group and replay routes are drawn on the basemap.
-- The phone shows the group map.
+- Added my own map style, used by both the web app and the phone.
+- Group rides and replays are drawn on the map.
+- The phone shows the group map too.
 
-## 4 Sep 2026: Watching group rides live, and a structural tidy-up
+## 4 Sep 2026
 
-- **Watch a group ride live on the phone**, over a WebSocket.
-- Late starters now appear in a live group view.
-- A simulator demo streams a whole group ride, so it can be watched without bikes.
-- The Android build completes on Windows.
-- Real PostgreSQL support, alongside the in-process development database.
-- Large internal consolidation: one way to authenticate, one live event stream, one way for the web
-  to reach the server, and one place the phone formats numbers and dates. Behaviour is unchanged,
-  with far fewer places for bugs to hide.
-- Fixed a share link's elevation following the wrong privacy channel.
-- Handover docs for setting the project up on another machine.
+- You can watch a group ride live on the phone.
+- Riders who start late now show up in the live view.
+- The simulator can play out a whole group ride, so I can test it without other riders.
+- The Android build works on Windows now.
+- Added support for a real PostgreSQL database.
+- Cleaned up a lot of the internals, mostly merging duplicate code into one place. Nothing changes
+  for users, there's just less to go wrong.
+- Fixed a share link showing elevation when it shouldn't have.
+- Wrote setup notes for moving to another machine.
 
-## 3 Sep 2026: Basemap and reference docs
+## 3 Sep 2026
 
-- The web draws rides on a self-hosted basemap and falls back when it's absent.
-- Reference documents typeset as PDFs.
-- Finished rides are closed automatically, and guessing a share link is made costly.
-- Fixed three blockers found while building the first Android app package.
+- Rides on the web are drawn on a map, with a fallback when the map can't load.
+- Turned the project docs into PDFs.
+- Rides left running are now closed automatically, and share links are harder to guess.
+- Fixed three things that stopped the Android app from building.
 
-## 2 Sep 2026: First version
+## 2 Sep 2026
 
-- **Live telemetry end to end:** the phone pairs Bluetooth sensors and GPS, records with the screen
-  off, and streams to a private share link that updates as you ride.
-- **Group riding:** a live map of the whole group, who is on the front, replay and highlights.
-- Clubs, profile pictures, and riders choosing what they share with a group.
-- FIT and GPX import.
-- Sign-in on the web (cookie-based) and on the phone, with the same five sections in each.
-- The chalk-on-road design system, shared by the phone and the web.
-- Desktop preview of the phone screens.
-- Error reporting: the web no longer shows a blank page on errors, and riders can file a report that
-  shows exactly what it contains.
-- Architecture, data-model and product write-ups.
+The first version:
+
+- The phone connects to Bluetooth sensors and GPS, records with the screen off, and streams to a
+  private link that updates as you ride.
+- Group rides with a live map, who's on the front, a replay and highlights.
+- Clubs, profile pictures, and a choice of what you share with a group.
+- Importing FIT and GPX files.
+- Signing in on the web and the phone.
+- The chalk design, shared by the web and the phone.
+- A way to preview the phone screens on my desktop.
+- Better error handling. The web app no longer goes blank on an error, and riders can send a bug
+  report that shows exactly what's in it.
+- Docs on the architecture and the data model.
